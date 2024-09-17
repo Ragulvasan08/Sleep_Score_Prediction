@@ -10,6 +10,16 @@ with st.expander('Data'):
   data = pd.read_csv('https://raw.githubusercontent.com/Ragulvasan08/Sleep_Score_Prediction/refs/heads/main/Sleep_Quality.csv')
   data
 
+  st.write('**X**')
+  X = data.drop('Sleep_Quality_Score', axis=1)
+  X
+
+  st.write('**Y**')
+  Y = data.Sleep_Quality_Score
+  Y
+
+  
+
 
 
 
