@@ -19,7 +19,6 @@ with st.expander('Data'):
   Y
 
 with st.expander('Data Visualization'):
-  st.write('**Line Chart of Sleep Quality vs Other Features**')
   # Example: Line chart for Sleep Duration and Sleep Quality
   st.line_chart(data=ds[['Sleep_Duration_Hours', 'Sleep_Quality_Score']])  # Visualize Sleep Duration and Quality
   # You can add more charts as needed
