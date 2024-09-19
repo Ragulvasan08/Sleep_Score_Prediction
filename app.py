@@ -26,7 +26,7 @@ with st.sidebar:
   st.header('Input Features')
   #Heart_Rate_Variability,Body_Temperature,Movement_During_Sleep,Sleep_Duration_Hours, Caffeine_Intake_mg,Stress_Level,Bedtime_Consistency,Light_Exposure_hours
   Heart_Rate_Variability = st.number_input(
-    "Insert a number", value=None, placeholder="Type a number..."
+    "What is your Heart_Rate_Variability", value=None, placeholder="Type a number..."
   )
   
   
