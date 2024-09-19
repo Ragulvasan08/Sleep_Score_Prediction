@@ -19,7 +19,7 @@ with st.expander('Data'):
   Y
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=ds, x='Heart_Rate_Variability', y='Body_Temperature', color='Sleep_Quality_Score', use_container_width=True)
+  st.bar_chart(data=ds, x='Heart_Rate_Variability', y='Body_Temperature', color='Sleep_Quality_Score', use_container_width=True)
 
 
   
