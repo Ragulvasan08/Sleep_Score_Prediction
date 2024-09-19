@@ -8,7 +8,7 @@ st.info('This is developed by using the Machine Learning Algorithm🤖')
 with st.expander('Data'):
   st.write('**Raw Data**')
   ds = pd.read_csv('https://raw.githubusercontent.com/Ragulvasan08/Sleep_Score_Prediction/refs/heads/main/Sleep_Quality.csv')
-  ds.drop(columns='Movement_During_Sleep','Stress_Level', axis=1, inplace = True)
+  ds.drop(columns='Movement_During_Sleep','Stress_Level', axis=1, inplace = True):
   ds
 
   st.write('**X**')
