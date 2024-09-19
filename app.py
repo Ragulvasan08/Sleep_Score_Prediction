@@ -8,6 +8,7 @@ st.info('This is developed by using the Machine Learning Algorithm🤖')
 with st.expander('Data'):
   st.write('**Raw Data**')
   ds = pd.read_csv('https://raw.githubusercontent.com/Ragulvasan08/Sleep_Score_Prediction/refs/heads/main/Sleep_Quality.csv')
+  ds.drop(columns=['Movement_During_Sleep','Stress_Level', axis=1, inplace = True]
   ds
 
   st.write('**X**')
@@ -26,7 +27,13 @@ with st.sidebar:
   st.header('Input Features')
   #Heart_Rate_Variability,Body_Temperature,Movement_During_Sleep,Sleep_Duration_Hours, Caffeine_Intake_mg,Stress_Level,Bedtime_Consistency,Light_Exposure_hours
   Heart_Rate_Variability = st.number_input(
-    "What is your Heart_Rate_Variability", value=None, placeholder="Type a number..."
+    "Enter your Heart_Rate_Variability", value=None, placeholder="Type a number..."
+  )
+  Heart_Rate_Variability = st.number_input(
+    "Enter your Heart_Rate_Variability", value=None, placeholder="Type a number..."
+  )
+  Heart_Rate_Variability = st.number_input(
+    "Enter your Heart_Rate_Variability", value=None, placeholder="Type a number..."
   )
   
   
