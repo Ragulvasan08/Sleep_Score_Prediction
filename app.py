@@ -19,5 +19,5 @@ with st.expander('Data'):
   Y
 
 with st.expander('Data Visualization'):
-  st.line_chart(data=ds
+
 
