@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import plotly.graph_objects as go
 
 # Title for the App
 st.title('😴 Sleep Score Prediction APP')
@@ -24,30 +24,98 @@ with st.expander('Data'):
     Y = ds['Sleep_Quality_Score']  # Dependent variable (target)
     st.dataframe(Y)
 
-# Data Visualization using Plotly
+# Data Visualization using Plotly Graph Objects
 with st.expander('Data Visualization'):
-    st.write('**Line Chart with Colors (Plotly)**')
+    st.write('**Line Chart with Enhanced Presentation**')
 
-    # Creating a line chart using Plotly
-    fig = px.line(ds, 
-                  x=ds.index,  # x-axis as index (or you can specify another column like time)
-                  y=['Sleep_Duration_Hours', 'Sleep_Quality_Score'],  # Columns to plot
-                  labels={'value': 'Value', 'index': 'Index'},  # Axis labels
-                  title='Sleep Duration vs Sleep Quality Score')
+    # Create a plotly figure
+    fig = go.Figure()
 
-    # Customizing lines with different colors
-    fig.update_traces(mode='bars+markers')  # Add markers to lines
+    # Add trace for Sleep Duration vs Sleep Quality Score
+    fig.add_trace(go.Scatter(
+        x=ds.index, 
+        y=ds['Sleep_Duration_Hours'],
+        mode='lines+markers',
+        name='Sleep Duration (Hours)',
+        line=dict(color='royalblue', width=2),
+        marker=dict(color='royalblue', size=6)
+    ))
 
-    # Display the chart in Streamlit
+    # Add trace for Sleep Quality Score
+    fig.add_trace(go.Scatter(
+        x=ds.index, 
+        y=ds['Sleep_Quality_Score'],
+        mode='lines+markers',
+        name='Sleep Quality Score',
+        line=dict(color='firebrick', width=2),
+        marker=dict(color='firebrick', size=6)
+    ))
+
+    # Customize layout for better appearance
+    fig.update_layout(
+        title='Sleep Duration vs Sleep Quality Score',
+        xaxis_title='Index',
+        yaxis_title='Value',
+        font=dict(family="Arial", size=12),
+        legend=dict(
+            title="Metrics",
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        xaxis=dict(showline=True, showgrid=False),
+        yaxis=dict(showline=True, showgrid=False)
+    )
+
+    # Show the chart in Streamlit
     st.plotly_chart(fig)
+    
+    # You can add more charts for different metrics similarly
+    # For example: Heart Rate Variability vs Sleep Quality Score
+    fig2 = go.Figure()
 
-    # Another line chart for Heart Rate Variability and Sleep Quality Score
-    fig2 = px.line(ds, 
-                   x=ds.index, 
-                   y=['Heart_Rate_Variability', 'Sleep_Quality_Score'], 
-                   labels={'value': 'Value', 'index': 'Index'}, 
-                   title='Heart Rate Variability vs Sleep Quality Score')
+    # Add trace for Heart Rate Variability
+    fig2.add_trace(go.Scatter(
+        x=ds.index, 
+        y=ds['Heart_Rate_Variability'],
+        mode='lines+markers',
+        name='Heart Rate Variability',
+        line=dict(color='green', width=2),
+        marker=dict(color='green', size=6)
+    ))
 
-    fig2.update_traces(mode='lines+markers')
+    # Add trace for Sleep Quality Score
+    fig2.add_trace(go.Scatter(
+        x=ds.index, 
+        y=ds['Sleep_Quality_Score'],
+        mode='lines+markers',
+        name='Sleep Quality Score',
+        line=dict(color='firebrick', width=2),
+        marker=dict(color='firebrick', size=6)
+    ))
+
+    # Customize layout for the second chart
+    fig2.update_layout(
+        title='Heart Rate Variability vs Sleep Quality Score',
+        xaxis_title='Index',
+        yaxis_title='Value',
+        font=dict(family="Arial", size=12),
+        legend=dict(
+            title="Metrics",
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        xaxis=dict(showline=True, showgrid=False),
+        yaxis=dict(showline=True, showgrid=False)
+    )
+
     st.plotly_chart(fig2)
-
