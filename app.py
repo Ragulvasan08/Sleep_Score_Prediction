@@ -21,5 +21,9 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
   st.area_chart(data=ds, x='Heart_Rate_Variability', y='Body_Temperature', color='Sleep_Quality_Score', use_container_width=True)
 
+#Data Preparation
+with st.sidebar:
+  st.header('Input Features')
+
 
 
