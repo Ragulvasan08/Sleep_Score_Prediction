@@ -29,7 +29,7 @@ with st.expander('Data Visualization'):
     st.line_chart(data=ds[['Heart_Rate_Variability', 'Sleep_Quality_Score']])
 
     # Example for Caffeine Intake and Sleep Quality Score
-    st.line_chart(data=ds[['Caffeine_Intake_mg', 'Sleep_Quality_Score']])
+    st.area_chart(data=ds[['Caffeine_Intake_mg', 'Sleep_Quality_Score']])
 
 
 
