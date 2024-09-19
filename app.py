@@ -20,7 +20,7 @@ with st.expander('Data'):
 
 with st.expander('Data Visualization'):
   st.write('**Raw Data**')
-  st.scatter_chart(data=ds, x='Heart_Rate_Variability', y='Body_Temperature', color='Sleep_Quality_Score', use_container_width=True)
+  st.bar_chart(data=ds, x='Heart_Rate_Variability', y='Body_Temperature', color='Sleep_Quality_Score', use_container_width=True)
 
 
 
