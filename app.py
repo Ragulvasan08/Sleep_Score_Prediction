@@ -18,6 +18,6 @@ with st.expander('Data'):
   Y = ds.Sleep_Quality_Score
   Y
 
-with st.expander('Data Visualization'):
+
 
 
