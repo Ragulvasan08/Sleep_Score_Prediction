@@ -36,7 +36,7 @@ with st.expander('Data Visualization'):
                   title='Sleep Duration vs Sleep Quality Score')
 
     # Customizing lines with different colors
-    fig.update_traces(mode='lines+markers')  # Add markers to lines
+    fig.update_traces(mode='markers')  # Add markers to lines
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
