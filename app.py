@@ -34,11 +34,11 @@ with st.sidebar:
   Light_Exposure_hours = st.slider("Enter your Light Exposure (hrs)", 0.0, 24.0, 5.0, step=0.1)
 
   #Create a DataFrame
-  data = {'Heart_Rate_Variability', Heart_Rate_Variability,
-          'Body_Temperature', Body_Temperature,
-          'Sleep_Duration_Hours',  Sleep_Duration_Hours,
-          'Caffeine_Intake_mg', Caffeine_Intake_mg,
-          'Light_Exposure_hours', Light_Exposure_hours }
+  data = {'Heart_Rate_Variability': Heart_Rate_Variability,
+          'Body_Temperature': Body_Temperature,
+          'Sleep_Duration_Hours':  Sleep_Duration_Hours,
+          'Caffeine_Intake_mg': Caffeine_Intake_mg,
+          'Light_Exposure_hours': Light_Exposure_hours }
   input_df = pd.DataFrame(data, index=[0])
   input_sleepscore = pd.concat([input_df, X], axis=0)
 
