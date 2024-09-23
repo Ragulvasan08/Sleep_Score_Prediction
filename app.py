@@ -56,11 +56,8 @@ clf = RandomForestRegressor()
 clf.fit(X,Y)
 
 ## Apply the model to make predictions
-prediction = clf.predict( input_sleepscore)
-prediction_proba = clf.prediction_proba( input_sleepscore)
-
-prediction_proba
-
+prediction = clf.predict( input_sleepscore[:-1])
+st.write(prediction)
 
 
   
