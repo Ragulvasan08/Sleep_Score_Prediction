@@ -90,8 +90,8 @@ regressor.fit(X, Y)
 # Predicting the Sleep Quality Score
 prediction = regressor.predict(input_df)
 
-# Displaying Prediction
-st.success(f"🎉 Your Predicted Sleep Quality Score is: **{prediction[0]:.2f}**")
+# Displaying Prediction with units
+st.success(f"🎉 Your Predicted Sleep Quality Score is: **{prediction[0]:.2f}/100**")
 
 # Footer section
 st.markdown("""
