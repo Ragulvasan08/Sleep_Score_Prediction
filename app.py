@@ -52,7 +52,7 @@ with st.expander('Input Features'):
 
 #Model Training and inference
 ##Train the ML Model 
-clf = RandomForestClassifier()
+clf = RandomForestRegressor()
 clf.fit(X,Y)
 
 ## Apply the model to make predictions
