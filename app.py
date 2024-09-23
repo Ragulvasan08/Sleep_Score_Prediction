@@ -38,6 +38,7 @@ with st.sidebar:
           'Body_Temperature': Body_Temperature,
           'Sleep_Duration_Hours':  Sleep_Duration_Hours,
           'Caffeine_Intake_mg': Caffeine_Intake_mg,
+          'Bedtime_Consistencey': Bedtime_Consistency,
           'Light_Exposure_hours': Light_Exposure_hours }
   input_df = pd.DataFrame(data, index=[0])
   input_sleepscore = pd.concat([input_df, X], axis=0)
