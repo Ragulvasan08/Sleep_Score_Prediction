@@ -26,12 +26,12 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input Features')
   #Heart_Rate_Variability,Body_Temperature, Sleep_Duration_Hours, Caffeine_Intake_mg,Bedtime_Consistency,Light_Exposure_hours
- Heart_Rate_Variability = st.slider("Enter your Heart Rate Variability (ms)", 0.0, 100.0, 50.0, step=0.1)
- Body_Temperature = st.slider("Enter your Body Temperature (°C)", 0.0, 100.0, 36.5, step=0.1)
- Sleep_Duration_Hours = st.slider("Enter your Sleep Duration (hrs)", 0.0, 12.0, 8.0, step=0.1)
- Caffeine_Intake_mg = st.slider("Enter your Caffeine Intake (mg)", 0.0, 500.0, 100.0, step=1.0)
- Bedtime_Consistency = st.slider("Enter your Bedtime Consistency (hrs)", 0.0, 10.0, 1.0, step=0.1)
- Light_Exposure_hours = st.slider("Enter your Light Exposure (hrs)", 0.0, 24.0, 5.0, step=0.1)
+  Heart_Rate_Variability = st.slider("Enter your Heart Rate Variability (ms)", 0.0, 100.0, 50.0, step=0.1)
+  Body_Temperature = st.slider("Enter your Body Temperature (°C)", 0.0, 100.0, 36.5, step=0.1)
+  Sleep_Duration_Hours = st.slider("Enter your Sleep Duration (hrs)", 0.0, 12.0, 8.0, step=0.1)
+  Caffeine_Intake_mg = st.slider("Enter your Caffeine Intake (mg)", 0.0, 500.0, 100.0, step=1.0)
+  Bedtime_Consistency = st.slider("Enter your Bedtime Consistency (hrs)", 0.0, 10.0, 1.0, step=0.1)
+  Light_Exposure_hours = st.slider("Enter your Light Exposure (hrs)", 0.0, 24.0, 5.0, step=0.1)
   
   
 
