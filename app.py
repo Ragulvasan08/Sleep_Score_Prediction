@@ -56,8 +56,8 @@ clf = RandomForestClassifier()
 clf.fit(X,Y)
 
 ## Apply the model to make predictions
-prediction = clf.predict(input_row)
-prediction_proba = clf.prediction_proba(input_row)
+prediction = clf.predict( input_sleepscore)
+prediction_proba = clf.prediction_proba( input_sleepscore)
 
 prediction_proba
 
