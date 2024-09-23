@@ -40,8 +40,9 @@ with st.sidebar:
           'Caffeine_Intake_mg', Caffeine_Intake_mg,
           'Light_Exposure_hours', Light_Exposure_hours }
   input_df = pd.DataFrame(data, index=[0])
-  
-input_df
+  input_sleepscore = pd.concat([input_df, X], axis=0)
+
+input_sleepscore
   
   
 
