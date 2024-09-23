@@ -43,8 +43,12 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_sleepscore = pd.concat([input_df, X], axis=0)
 
-input_sleepscore
-# input_df
+with st.expander('Input Features'):
+  st.write('**Input Sleep_Score**')
+  input_df
+  st.write('**Combined SleepScore Data**')
+  input_sleepscore
+
   
   
 
