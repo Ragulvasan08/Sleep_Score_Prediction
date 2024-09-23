@@ -32,6 +32,16 @@ with st.sidebar:
   Caffeine_Intake_mg = st.slider("Enter your Caffeine Intake (mg)", 0.0, 500.0, 100.0, step=1.0)
   Bedtime_Consistency = st.slider("Enter your Bedtime Consistency (hrs)", 0.0, 10.0, 1.0, step=0.1)
   Light_Exposure_hours = st.slider("Enter your Light Exposure (hrs)", 0.0, 24.0, 5.0, step=0.1)
+
+  #Create a DataFrame
+  data = {'Heart_Rate_Variability', Heart_Rate_Variability,
+          'Body_Temperature', Body_Temperature,
+          'Sleep_Duration_Hours',  Sleep_Duration_Hours,
+          'Caffeine_Intake_mg', Caffeine_Intake_mg,
+          'Light_Exposure_hours', Light_Exposure_hours }
+  input_df = pd.DataFrame(data, index=[0])
+  
+input_df
   
   
 
